@@ -9,7 +9,8 @@ class Event(models.Model):
     url = models.URLField(null=True)
     class Meta:
         verbose_name = "Events"
-        verbose_name_plural = "Events"  
+        verbose_name_plural = "Events"
+    
 
 class SocialMediaLink(models.Model):
     url = models.URLField(null=True)
