@@ -7,11 +7,17 @@ function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    getData()
+    getSocialMedia()
   }, [])
 
-  const getData = async () => {
+  const getEvents = async () => {
     const response = await fetch(`${import.meta.env.VITE_API}/events/`)
+    const jsonData = await response.json();
+    console.log(jsonData);
+  }
+
+  const getSocialMedia = async () => {
+    const response = await fetch(`${import.meta.env.VITE_API}/social-links/`)
     const jsonData = await response.json();
     console.log(jsonData);
   }
