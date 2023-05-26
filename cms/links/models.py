@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 
 class Event(models.Model):
     title = models.CharField(max_length=200, null=True)
@@ -8,7 +9,7 @@ class Event(models.Model):
     url = models.URLField(null=True)
     class Meta:
         verbose_name = "Events"
-        verbose_name_plural = "Events"
+        verbose_name_plural = "Events"  
 
 class SocialMediaLink(models.Model):
     url = models.URLField(null=True)
