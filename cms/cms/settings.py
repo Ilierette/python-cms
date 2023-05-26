@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'links',
+    'corsheaders',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,6 +59,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cms.urls'
+
+CORS_ALLOWED_ORIGINS = [
+    env("CORS_ORGIN"),
+]
 
 TEMPLATES = [
     {

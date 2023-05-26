@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React + TS</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  
+  <!-- Place <div> tag where you want the feed to appear -->
+  <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
+      class="crt-logo crt-tag">Powered by Curator.io</a></div>
+  <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+  <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function () {
+      var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8";
+      i.src = "https://cdn.curator.io/published/018bd89e-8688-4d18-be17-43914a3f83a8.js";
+      e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
+    })();
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
