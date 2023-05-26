@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include("events.urls"))
-]
+admin.site.site_header = "CMS Hub"
+admin.site.index_title = "Statistics"
+admin.site.site_title = "CMS Hub"
+
+urlpatterns = [path("admin/", admin.site.urls), path("", include("links.urls"))]

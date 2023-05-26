@@ -1,18 +1,18 @@
 from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from events.models import Event
-from events.serializers import EventSerializer
+from links.models import Event
+from links.serializers import EventSerializer
+from rest_framework.decorators import api_view
 
-@csrf_exempt
-def events_list(request):
+@api_view(['GET'])
+def events_list(request, format=None):
     if request.method == 'GET':
         events = Event.objects.all()
         serializer = EventSerializer(events, many="True")
         return JsonResponse(serializer.data, safe=False)
 
-@csrf_exempt
-def event_detail(request, pk):
+@api_view(['GET'])
+def event_detail(request, pk, format=None):
     try: 
         event = Event.objects.get(pk=pk)
 
