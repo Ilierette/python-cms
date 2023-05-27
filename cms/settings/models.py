@@ -10,7 +10,7 @@ class Banner(models.Model):
 
     title = models.CharField(max_length=200, null=True)
     subtitle = models.CharField(max_length=200, blank=True, null=True)
-    image = models.ImageField(upload_to="banners", null=True)
+    image = models.ImageField(upload_to="img/banners", null=True)
     active = models.BooleanField()
     button_text = models.CharField(max_length=200, blank=True, null=True)
     button_link = models.CharField(max_length=200, blank=True, null=True)
