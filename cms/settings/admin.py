@@ -11,14 +11,14 @@ class BannerAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ["active", "image"],
-            },
-        ),
-        (
-            "Banner Info",
-            {
                 "fields": [("title", "subtitle"), ("button_text", "button_link")]
             }
+        ),
+        (
+            "Banner Image",
+            {
+                "fields": ["active", "image"],
+            },
         )
     ]
 

@@ -11,14 +11,13 @@ class EventAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields":["name",("pub_date","event_date"),"url"],
+                "fields":[("name","url")],
             }
         ),
         (
-            "Optional",
+            "Dates",
             {
-                "classes":["collapse"],
-                "fields":["description"]
+                "fields":[("pub_date","event_date")]
             }
         )
     ]
@@ -33,7 +32,7 @@ class SocialMediaAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ["url", "name"]
+                "fields": [("name","url")]
             }
         )
     ]
@@ -50,7 +49,13 @@ class WishlistAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ["url", "name","description"]
+                "fields": [("name","url")]
+            }
+        ),
+        (
+            "Description",
+            {
+                "fields": ["description"]
             }
         )
     ]
@@ -65,7 +70,13 @@ class AffiliateAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ["url", "name","description"]
+                "fields": [("name","url")]
+            }
+        ),
+        (
+            "Description",
+            {
+                "fields": ["description"]
             }
         )
     ]
