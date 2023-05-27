@@ -7,7 +7,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    getSocialMedia()
+    //getEvents()
+    //getSocialMedia()
+    //getWishList()
+    //getRecomendations()
   }, [])
 
   const getEvents = async () => {
@@ -18,6 +21,18 @@ function App() {
 
   const getSocialMedia = async () => {
     const response = await fetch(`${import.meta.env.VITE_API}/social-links/`)
+    const jsonData = await response.json();
+    console.log(jsonData);
+  }
+
+  const getWishList = async () => {
+    const response = await fetch(`${import.meta.env.VITE_API}/wishlist/`)
+    const jsonData = await response.json();
+    console.log(jsonData);
+  }
+
+  const getRecomendations = async () => {
+    const response = await fetch(`${import.meta.env.VITE_API}/recomendation-list/`)
     const jsonData = await response.json();
     console.log(jsonData);
   }

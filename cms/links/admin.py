@@ -3,7 +3,7 @@ from .models import AffiliateLink, Event, SocialMediaLink, WishlistItem
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    change_list_template='links\event_description.html'
+    change_list_template="links\event_description.html"
     actions_on_bottom = True
     actions_on_top = False
     list_display=["name","event_date"]
@@ -11,21 +11,21 @@ class EventAdmin(admin.ModelAdmin):
         (
             None,
             {
-                'fields':['name',('pub_date','event_date'),'url'],
+                "fields":["name",("pub_date","event_date"),"url"],
             }
         ),
         (
-            'Optional',
+            "Optional",
             {
-                'classes':['collapse'],
-                'fields':['description']
+                "classes":["collapse"],
+                "fields":["description"]
             }
         )
     ]
 
 @admin.register(SocialMediaLink)
 class SocialMediaAdmin(admin.ModelAdmin):
-    change_list_template='links\social_description.html'
+    change_list_template="links\social_description.html"
     actions_on_bottom = True
     actions_on_top = False
     list_display=["name", "url"]
@@ -33,7 +33,7 @@ class SocialMediaAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ['url', 'name']
+                "fields": ["url", "name"]
             }
         )
     ]
@@ -42,7 +42,7 @@ class SocialMediaAdmin(admin.ModelAdmin):
 
 @admin.register(WishlistItem)
 class WishlistAdmin(admin.ModelAdmin):
-    change_list_template='links\wishlist_description.html'
+    change_list_template="links\wishlist_description.html"
     actions_on_bottom = True
     actions_on_top = False
     list_display=["name", "url", "description"]
@@ -50,14 +50,14 @@ class WishlistAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ['url', 'name','description']
+                "fields": ["url", "name","description"]
             }
         )
     ]
 
 @admin.register(AffiliateLink)
 class AffiliateAdmin(admin.ModelAdmin):
-    change_list_template='links\description.html'
+    change_list_template="links\description.html"
     actions_on_bottom = True
     actions_on_top = False
     list_display=["name", "url", "description"]
@@ -65,7 +65,7 @@ class AffiliateAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ['url', 'name','description']
+                "fields": ["url", "name","description"]
             }
         )
     ]

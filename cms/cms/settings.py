@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'links',
+    'settings',
     'corsheaders',
     'rest_framework',
     'django.contrib.admin',
@@ -96,8 +97,6 @@ DATABASES = {
         'PORT': env("DB_PORT"),
     }
 }
-
-#To do - production data to .env file
 
 
 # Password validation
