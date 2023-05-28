@@ -1,10 +1,21 @@
-{% extends "admin/index.html" %}
+{% extends 'admin/index.html' %}
 
-{% block sidebar  %}
-<div class="sidebar">
-    {% block pretitle %}{% endblock %}
-    {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
-    {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
+{% block sidebar %}
+  <div class="sidebar">
+    {% block pretitle %}
+    {% endblock %}
+    {% block content_title %}
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+    {% endblock %}
+    {% block content_subtitle %}
+      {% if subtitle %}
+        <h2>{{ subtitle }}</h2>
+      {% endif %}
+    {% endblock %}
+    
     TO DO - statistics there
-</div>
+  
+  </div>
 {% endblock %}
